@@ -1,0 +1,138 @@
+:root {
+  --blue: #2E294E;
+  --lightblue: #345995;
+  --yellow: #EAC435;
+  --orange: #F46036;
+  --red: #D7263D;
+  --space: #2B2D42;
+  --gray: #8D99AE;
+  --white: #EDF2F4;
+  --green: #4D8B31;
+  --raisin: #1E212B;
+  --burgundy: #AF1B3F;
+}
+
+* {
+  box-sizing: border-box; /* Good for CSS/Box Model Debugging */
+  border: 1px solid var(--burgundy);
+  margin: 0px 10px;
+  position: relative; /* || static. Best for responsiveness */
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--blue);
+  font-family: Roboto, sans-serif;
+  font-size: 1rem; /* Rem for responsiveness / rel to root */
+  color: white;
+}
+
+nav a {
+  color: var(--red);
+  font-weight: bold;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+nav ul {
+  margin: 0 auto;
+
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+/* RESPONSIVENESS CHEAT SHEET 
+  USE REM FOR FONTS
+  USE BOX-SIZING: BORDER BOX;
+  USE POSITION RELATIVE
+  USE HEIGHT AND WIDTH PERCENTAGES (100% WORKS WHEN NO PADDING/MARGIN)
+  MIN WIDTH AND MAX WIDTH FOR PARAGRAPHS
+  overflow: scroll; when content is hidden
+
+  USE MEDIA QUERIES:
+
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        p {
+          font-size: 12px;
+        }
+      }
+  
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        p {
+          font-size: 14px;
+        }
+      }
+  
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        p {
+          font-size: 16px;
+        }
+      }
+  
+      /* Large devices (laptops/desktops, 1024px and up) */
+      @media only screen and (min-width: 1024px) {
+        p {
+          font-size: 18px;
+        }
+      }
+  
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+        p {
+          font-size: 20px;
+        }
+      }
+  
+      /* 480px (smartphones), 768px (tablets), and 1200px (desktops) are the most commonly used */
+  
+      /* @media only screen and (min-resolution: 300dpi) {
+         /* CSS for high resolution screens
+        }
+
+        @media only screen and (min-resolution: 150dpi) {
+        .logo {
+        background-image: url("../img/spaceship@2x.png");
+       }
+}
+
+/*
+  BG IMG RESPONSIVENESS
+  background-image: url('#');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+*/
+
+a[href*="imagename"] {
+  color: #ccc;
+}
+
+/* Always Design for Mobile First */
+
+/* CSS Framework Tailwind */
+
+    /* Add fallback fonts and check if font is supported on different browsers */
+
+    /* Add font superfamilies */
+
+    /* master CSS Pseudo classes/elements and transition */
+
+    /* Learn CSS animation w/ keyframes for sick design */
+
+    /* Flexbox */
+
+    /* Using a grid-view is very helpful when designing web pages. It makes it easier to place elements on the page. */
+
+    /* Sass & Less created before var() functions. Not really necessary, but nesting can make css code easier to read and understand */

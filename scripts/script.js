@@ -1,36 +1,50 @@
-// Single line comment
+const javascript = true;
+const react = 12;
+const node = 'cool';
 
-/* Multi
-Line
-Comment */
+// conditionals
+// ternary operator
 
-// const, let (var - old)
-// let can be changed, const is constant
+javascript ? console.log("I am a JavaScript developer") : console.log("I am a Java developer");
 
-const year = 2003;
+// if else / else if
 
-let birth = 2003;
+if (react >= 12) {
+  console.log("I am a React developer");
+} else if (react < 12) {
+  console.log("I am a Vue developer");
+} else {
+  console.log("I am a SolidJS developer");
+}
 
-birth = 2000;
+// switch
 
-console.log(year);
-console.log(birth);
+switch (node) {
+  case 'advanced':
+    console.log("NodeJS is advanced");
+    break;
+  case 'best':
+    console.log("NodeJS is the best");
+    break;
+    case 'cool':
+    console.log("NodeJS is cool");
+    break;
+  default:
+    console.log("NodeJS is not cool");
+}
 
-// String ("example"), Numbers(1,2,3,10.5), Boolean (true/false), null(nothing), undefined (Main data types)
+//functions
 
-const name = "John"; // string
-const age = 30; // number
-const rating = 4.5; //number with decimal
-const isCool = true; // Boolean
-const x = null; // null
-const y = undefined; // undefined
-let z; // undefined
+const functionExample = (a, b) => {
+  return a * b;
+}
+console.log(functionExample(2, 3)); // 6
 
-console.log(typeof age);
+// loops
 
-// Concatenation
-
-console.log("My name is " + name + " and I am " + age);
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 
 // Template String
 
@@ -46,6 +60,9 @@ console.log(eg.substring(0, 5).toUpperCase());
 
 //Arrays - variables that hold multiple values
 //Array methods
+
+// create an array
+
 
 const numbers = new Array(1, 2, 3, 4, 5);
 
@@ -69,9 +86,6 @@ console.log(fruits[1]);
 }
 
 */
-
-console.error("error");
-console.warn("warning");
 
 //Object literals
 
@@ -119,9 +133,6 @@ console.log(todos);
 
 console.log(todos[1].text);
 
-
-// forEach, map, filter (Arrays) functional programming
-
-alert("close window");
-
-//////// Mouseevent (onmouseleave, onmouseover etc.)
+// ES6 forEach, map, filter (Arrays) functional programming
+// Events (onmouseleave, onmouseover etc.)
+// Use as little global variables as possible to avoid scope pollution / variable collision

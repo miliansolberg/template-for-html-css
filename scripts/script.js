@@ -2,18 +2,13 @@
 // common js variable names (key = dictionary keys, i = numbered indexes, x = iterable, y, z))
 // use meaningful variable names for global/important variables
 // use short variable names on local variables for code optimization and less bugs (faster website)
-// JS bundlers will optimize code for you (webpack, parcel, rollup) and minify code (remove spaces, new lines, etc)
+// JS bundlers (Vite >>> webpack) will optimize code for you and minify code (remove spaces, new lines, etc)
 // therefore, use meaningful variable names for most variables
 // avoid infinite loops
 // avoid using var, use let or const
 // avoid using global variables
 // avoid using eval()
 // avoid using with()
-
-// use camelCase for variable names
-// use PascalCase for class names
-// use snake_case for file names
-// use kebab-case for html/css ids and classes
 
 // JS is a loosely typed language
 // JS is a dynamically typed language
@@ -235,7 +230,8 @@ window.__remixManifest = {
           "hasCatchBoundary": true,
           "hasErrorBoundary": false
       },
-  ],
+  }
+  ,
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "standalone"

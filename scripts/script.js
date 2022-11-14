@@ -86,6 +86,21 @@ console.log(fruits);
 console.log(fruits[1]);
 
 
+// callback functions
+
+const addTwo = num => {
+  return num + 2;
+}
+
+const checkConsistentOutput = (func, val) => {
+  let checkA = val + 2;
+  let checkB = func(val);
+  return checkA === checkB ? func(val) : 'inconsistent results';  
+}
+
+console.log(checkConsistentOutput(addTwo, 10));
+
+
 // LOOPS
 
 for (let i = 0; i < 10; i++) {
@@ -142,6 +157,78 @@ for (let i = 0; i < rapperArray.length; i++){
 
 console.log("And if you don't know, now you know.");
 
+//for...of loops (ES6) & break + continue
+// In the example above, we iterated through an array in reverse! You would not be able to use a for...of loop to do the same thing.
+// However, with a regular for loop, you have access to indices of the elements, determine a stopping condition, and the ability to set a counter.
+// Keep these factors in mind when deciding what loop is right for your circumstance.
+const fruits = ['oranges', 'apples', 'grapes'];
+ 
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+
+const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Terrorbird','Parotia','Kakapo'];
+ 
+for (const bird of strangeBirds) {
+  if (bird === 'Basan'){ 
+    break; 
+  }
+  console.log(bird);
+}
+
+const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Cow', 'Terrorbird', 'Parotia', 'Kakapo'];
+ 
+for (const bird of strangeBirds) {
+  if  (bird === 'Cow'){
+    continue;
+  }
+  console.log(bird);
+}
+
+// for...in loops (ES6) - used to iterate over objects
+for (let crewMember in spaceship.crew) {
+  console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`);
+}
+
+
+// OBJECTS - key value pairs
+let spaceShip = {
+  'Fuel Type': 'Turbo Fuel',
+  color: 'red'
+};
+
+// dot notation && bracket notation
+spaceShip.color; // returns 'red'
+spaceShip['Fuel Type']; // returns 'Turbo Fuel'
+
+// property assignment
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth',
+  color: 'silver',
+  'Secret Mission' : 'Discover life outside of Earth.'
+};
+
+spaceship.color = 'glorious gold';
+spaceship.numEngines = 8;
+
+delete spaceship['Secret Mission'];
+
+// methods
+// methods are actions we can perform. They are stored in properties as function definitions.
+
+let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
+
+const alienShip = {
+  retreat() {
+    console.log(retreatMessage);
+  },
+  takeOff() {
+        console.log('Spim... Borp... Glix... Blastoff!');
+  }
+};
+alienShip.retreat();
+alienShip.takeOff();
 
 
 // Template String
@@ -236,3 +323,5 @@ window.__remixManifest = {
   "background_color": "#ffffff",
   "display": "standalone"
 }
+
+// object methods

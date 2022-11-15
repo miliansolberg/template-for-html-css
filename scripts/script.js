@@ -66,7 +66,7 @@ const functionExample = (a, b) => {
 console.log(functionExample(2, 3)); // 6
 
 // ARRAYS - lists that store data
-const fruits = ["apples", "oranges", "pears, 10, true"];
+const foods = ["apples", "oranges", "pears, 10, true"];
 
 // Nested arrays - array within an array
 const nestedArr = [[1], [2, 3]];
@@ -75,15 +75,15 @@ console.log(nestedArr[1]); // Output: [2, 3]
 // Array methods 
 // .push, .pop, .join(), .slice(), .splice(), .shift(), .unshift(), .concat(
 
-fruits[3] = "grapes";
-fruits.push("mangos");
-fruits.unshift("strawberries");
-fruits.pop();
+foods[3] = "grapes";
+foods.push("mangos");
+foods.unshift("strawberries");
+foods.pop();
 
-console.log(Array.isArray(fruits));
-console.log(fruits.indexOf("oranges"));
-console.log(fruits);
-console.log(fruits[1]);
+console.log(Array.isArray(foods));
+console.log(foods.indexOf("oranges"));
+console.log(foods);
+console.log(foods[1]);
 
 
 // callback functions
@@ -129,12 +129,12 @@ for(let i = 0; i < bobsFollowers.length; i++) {
   }
 }
 
-// while loops
-let currentCard = 'de';
+// while loops (infinite loop, watch out!)
+/* let currentCard = ['king'];
 while (currentCard !== 'spade') {
-  currentCard = cards[Math.floor(Math.random() * 4)];
-  console.log(currentCard);
-}
+  const card = currentCard[Math.floor(Math.random() * 4)];
+  console.log(currentCard); 
+} */
 
 // do while loops - will always run at least once
 let cupsOfSugarNeeded = 0;
@@ -176,9 +176,9 @@ for (const bird of strangeBirds) {
   console.log(bird);
 }
 
-const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Cow', 'Terrorbird', 'Parotia', 'Kakapo'];
+const strangeFliers = ['Shoebill', 'Cockatrice', 'Basan', 'Cow', 'Terrorbird', 'Parotia', 'Kakapo'];
  
-for (const bird of strangeBirds) {
+for (const bird of strangeFliers) {
   if  (bird === 'Cow'){
     continue;
   }
@@ -186,9 +186,9 @@ for (const bird of strangeBirds) {
 }
 
 // for...in loops (ES6) - used to iterate over objects
-for (let crewMember in spaceship.crew) {
-  console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`);
-}
+// for (let crewMember in spaceship.crew) {
+// console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`);
+// }
 
 
 // OBJECTS - key value pairs
@@ -298,6 +298,53 @@ console.log(todos[1].text);
 // ES6 forEach, map, filter (Arrays) functional programming
 // Events (onmouseleave, onmouseover etc.)
 // Use as little global variables as possible to avoid scope pollution / variable collision
+
+// a callback function is a function passed as an argument into another function.
+
+// Higher order functions
+const higherOrderFunc = param => {
+  param();
+  return `I just invoked ${param.name} as a callback function!`
+}
+ 
+const anotherFunc = () => {
+  return 'I\'m being invoked by the higher-order function!';
+}
+ 
+higherOrderFunc(anotherFunc);
+
+// Iterators (.forEach, .map, .filter)
+// Iterators are methods called on arrays to manipulate elements and return values.
+
+const artists = ['Picasso', 'Kahlo', 'Matisse', 'Utamaro'];
+
+artists.forEach(artist => {
+  console.log(artist + ' is one of my favorite artists.');
+});
+
+const numbers = [1, 2, 3, 4, 5];
+
+const squareNumbers = numbers.map(number => {
+  return number * number;
+});
+
+console.log(squareNumbers);
+
+const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];
+
+const onlyNumbers = things.filter(thing => {
+  return typeof thing === 'number';
+});
+
+console.log(onlyNumbers);
+
+
+// findIndex()
+const jumbledNums = [123, 25, 78, 5, 9]; 
+ 
+const lessThanTen = jumbledNums.findIndex(num => {
+  return num < 10;
+});
 
 // web manifest 
 window.__remixManifest = {

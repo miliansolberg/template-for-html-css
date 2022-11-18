@@ -1,0 +1,24 @@
+# OS generated files
+.DS_Store
+
+# log files
+*.log
+
+# dist : /build/target/dest files
+/dist
+
+# package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+#todo list
+todo.md
+
+
+# A .gitignore file prevents certain files from entering a remote repository.
+# This should include all forbidden files like .env and .pem, log files, and other sensitive files as they relate to your project.

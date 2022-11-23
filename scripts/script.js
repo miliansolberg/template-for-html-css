@@ -363,54 +363,13 @@ const lessThanTen = jumbledNums.findIndex((num) => {
   return num < 10;
 });
 
+// reduce()
+const numbers = [1, 2, 4, 10];
+ 
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+}, 100)  // <- Second argument for .reduce()
+ 
+console.log(summedNums); // Output: 117
+
 // object methods
-
-
-
-
-
-
-
-
-
-
-
-
-// web manifest
-window.__remixManifest = {
-  version: "d36b817a",
-  entry: {
-    module: "/build/entry.client-EUITTQHJ.js",
-    imports: [
-      "/build/_shared/chunk-ZDRGQH5V.js",
-      "/build/_shared/chunk-VK3NTCPL.js",
-      "/build/_shared/chunk-ZPHV5ZYN.js",
-      "/build/_shared/chunk-EQWCKCTW.js",
-      "/build/_shared/chunk-X3FSQJCZ.js",
-      "/build/_shared/chunk-WJC7M44Z.js",
-      "/build/_shared/chunk-6VRK4GPR.js",
-    ],
-  },
-  routes: {
-    root: {
-      id: "root",
-      path: "",
-      module: "/build/root-RRU5ZYWW.js",
-      imports: [
-        "/build/_shared/chunk-3AOXMHAT.js",
-        "/build/_shared/chunk-LIM32NTY.js",
-        "/build/_shared/chunk-ENZWTUWY.js",
-        "/build/_shared/chunk-VBYTPGLN.js",
-        "/build/_shared/chunk-X6PRMLGM.js",
-        "/build/_shared/chunk-R3N3MVI7.js",
-      ],
-      hasAction: false,
-      hasLoader: true,
-      hasCatchBoundary: true,
-      hasErrorBoundary: false,
-    },
-  },
-  theme_color: "#ffffff",
-  background_color: "#ffffff",
-  display: "standalone",
-};

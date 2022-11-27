@@ -372,4 +372,12 @@ const summedNums = numbers.reduce((accumulator, currentValue) => {
  
 console.log(summedNums); // Output: 117
 
+// regular expressions
+// Regular expressions are patterns used to match character combinations in strings.
+
+// .test()
+const myString
+const myRegex = /Hello/;
+const result = myRegex.test(myString);
+
 // object methods

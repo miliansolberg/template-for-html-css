@@ -50,6 +50,8 @@ nav ul li {
   display: inline-block;
 }
 
+
+
 /* RESPONSIVENESS CHEAT SHEET 
   USE REM FOR FONTS
   USE BOX-SIZING: BORDER BOX;
@@ -127,7 +129,7 @@ a[href*="imagename"] {
 
     /* Add font superfamilies */
 
-    /* master CSS Pseudo classes/elements and transition */
+    /* master CSS Pseudo classes/elements and transition (disable transitions on smaller devices) */
 
     /* Learn CSS animation w/ keyframes for sick design */
 

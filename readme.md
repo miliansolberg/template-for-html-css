@@ -3,13 +3,13 @@ My own template that I follow for each of my projects. I use this template in my
 
 Here I also have all my commonly used attributes, all in one place. This makes it easier for me to start a project and get to work.
 
-## Features:
+## Features
 
-1. Technical SEO (Meta tags, semantic, manifest & SW's, tips & tricks)
+1. Technical & On-Page SEO (Meta tags, semantic, manifest & SW's, tips & tricks)
 2. Modern & Accessible Code
 3. Additional Files
 
-### Technologies used:
+### Technologies used
 
 * HTML
 * CSS

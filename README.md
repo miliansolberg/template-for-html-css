@@ -1,7 +1,7 @@
 # Web Performance & SEO Template
 My own template that I follow for each of my projects. I use this template in my projects to optimize web page speed, SEO and Lighthouse ranking in general.
 
-Here I also have all my commonly used attributes, all in one place. This makes it easier for me to start a project and to get to work effectively.
+I also have all my commonly used attributes in these files. This gives me a headstart on my projects and helps me to get to work effectively.
 
 ## Features
 

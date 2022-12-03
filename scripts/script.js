@@ -2,6 +2,8 @@
 // common js variable names (key = dictionary keys, i = numbered indexes, x = iterable, y, z))
 // use meaningful variable names for global/important variables
 // use short variable names on local variables for code optimization and less bugs (faster website)
+// reduce unused javascript
+// defer offscreen images for faster loading
 // JS bundlers (Vite >>> webpack) will optimize code for you and minify code (remove spaces, new lines, etc)
 // therefore, use meaningful variable names for most variables
 // avoid infinite loops
@@ -424,3 +426,18 @@ class Nurse extends HospitalEmployee {  // Inheritance
 
   const nurseOlynyk = new Nurse('Olynyk', ['Trauma', 'Pediatrics']); // Create new class instance
 console.log(nurseOlynyk._certifications); // Getter
+
+class Animal {
+  constructor(name) {
+    this._name = name;
+    this._behavior = 0;
+  }
+ 
+  static generateName() {     // Static Method
+    const names = ['Angel', 'Spike', 'Buffy', 'Willow', 'Tara'];
+    const randomNumber = Math.floor(Math.random()*5);
+    return names[randomNumber];
+  }
+} 
+
+console.log(Animal.generateName()); // returns a name

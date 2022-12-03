@@ -25,9 +25,18 @@
 // JS is a asynchronous language
 // JS is a event driven language
 
+import react from "react"; // modules are reusable pieces of code that can be exported from one program and imported for use in another program
+import reactDOM from "react-dom";
+import './styles/styles.scss'
+import functionExample from "./script.js";
+import {addTwo, checkConsistentOutput} from './script.js';
+
+
 const javascript = true;
 const react = 12;
 const node = "cool";
+
+export { javascript, react, node, functionExample, addTwo, checkConsistentOutput, higherOrderFunc, anotherFunc };
 
 // CONDITIONALS
 // ternary operator
@@ -441,3 +450,23 @@ class Animal {
 } 
 
 console.log(Animal.generateName()); // returns a name
+
+
+// error handling
+// built in runtime errors (ReferenceError, TypeError, SyntaxError, RangeError, URIError, EvalError)
+
+
+// custom errors (Error keyword, code will run after) 
+
+console.log(error('Your password is too short.'));
+
+// try...catch
+try {
+  throw Error('This error will get caught');
+} catch (e) {
+  console.log(e);
+}
+
+// throw error
+
+throw error ('user not found'); // Code will not run after throw error

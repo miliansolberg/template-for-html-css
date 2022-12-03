@@ -3,6 +3,10 @@
     Disallow: /tmp/
     Disallow: /~joe/
 
+    User-Agent: Googlebot
+    Allow: .js
+    Allow: .css
+
     Sitemap: https://www.example.com/sitemap.xml
     Sitemap: https://www.example.com/de-de/sitemap.xml
     Sitemap: https://www.example.com/fr-fr/sitemap.xml

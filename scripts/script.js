@@ -381,3 +381,46 @@ const myRegex = /Hello/;
 const result = myRegex.test(myString);
 
 // object methods
+
+// classes
+class Surgeon {   // Create Class
+  constructor(name, department) {   //Constructor
+    this._name = name;    //Method
+    this._department = department;
+    this._remainingVacationDays = 20;
+  }
+  
+  get name() {
+    return this._name;    // Class Method
+  }
+  
+  get department() {
+    return this._department;
+  }
+  
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+
+const surgeonRomero = new Surgeon('Francisco Romero', 'Cardiovascular'); //Create new class instance
+const surgeonJackson = new Surgeon('Ruth Jackson', 'Orthopedics');
+
+console.log(surgeonRomero.name); // Method Calls
+console.log(surgeonRomero.takeVacationDays(3));
+console.log(surgeonRomero.remainingVacationDays);
+
+
+class Nurse extends HospitalEmployee {  // Inheritance
+  constructor(name, certifications) {
+    super(name);
+    this._certifications = certifications; // Setter
+  }
+}
+
+  const nurseOlynyk = new Nurse('Olynyk', ['Trauma', 'Pediatrics']); // Create new class instance
+console.log(nurseOlynyk._certifications); // Getter

@@ -470,3 +470,11 @@ try {
 // throw error
 
 throw error ('user not found'); // Code will not run after throw error
+
+
+// Async / Await (ES8) (Promises) (fetch)
+
+
+
+
+// Spread Operator & Rest Operator (ES6) (...) (destructuring)

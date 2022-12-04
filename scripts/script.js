@@ -478,3 +478,10 @@ throw error ('user not found'); // Code will not run after throw error
 
 
 // Spread Operator & Rest Operator (ES6) (...) (destructuring)
+
+
+// Javascript testing (Mocha, TDD, Manual testing, Automated testing, etc.)
+
+// Manually testing (npm start, npm test, npm run build, etc.)
+
+

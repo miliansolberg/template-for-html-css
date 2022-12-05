@@ -472,16 +472,32 @@ try {
 throw error ('user not found'); // Code will not run after throw error
 
 
-// Async / Await (ES8) (Promises) (fetch)
-
-
-
-
-// Spread Operator & Rest Operator (ES6) (...) (destructuring)
-
-
 // Javascript testing (Mocha, TDD, Manual testing, Automated testing, etc.)
 
 // Manually testing (npm start, npm test, npm run build, etc.)
 
 
+describe and it blocks (Mocha)
+
+describe('My First Test', () => {
+  it('Does not do much!', () => {
+    expect(true).to.equal(true)
+  })
+}
+
+// Async + async await (ES8) (Promises) (fetch)
+// asynchronous programming is a programming paradigm that enables
+//  a program to do more than one thing at the same time.
+
+// write a async function
+async function myDisplay() {
+  let myPromise = new Promise(function(myResolve, myReject) {
+    setTimeout(function() { myResolve
+      ("I love You !!"); }, 3000);
+  });
+
+  console.log(await myPromise);
+}
+
+
+// Spread Operator & Rest Operator (ES6) (...) (destructuring)

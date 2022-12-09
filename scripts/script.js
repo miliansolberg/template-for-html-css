@@ -485,7 +485,7 @@ describe('My First Test', () => {
   })
 }
 
-// Async + async await (ES8) (Promises) (fetch)
+// Async
 // asynchronous programming is a programming paradigm that enables
 //  a program to do more than one thing at the same time.
 
@@ -498,6 +498,66 @@ async function myDisplay() {
 
   console.log(await myPromise);
 }
+
+// asynchronous callback functions, setTimeout(), setInterval(), requestAnimationFrame(), etc.
+//  this prevents any blocking, and allows other code to be run in the meantime.
+
+async function myFunction() {
+  setTimeout(function(){ alert("I love You !!"); }, 3000);
+}
+
+//  async (Promises) 
+const myExecutor = (resolve, reject) => {
+  if (inventory.sunglasses > 0) {
+    resolve('Sunglasses order processed.');
+  } else {
+    reject('That item is sold out.');
+  }
+}
+
+const orderSunglasses = () => {
+  return new Promise(myExecutor);
+}
+
+const orderPromise = orderSunglasses();
+
+console.log(orderPromise);
+
+
+
+// async (promises and .then w/full best practices) 
+const {checkInventory, processPayment, shipOrder} = require('./library.js');
+
+const order = {
+  items: [['sunglasses', 1], ['bags', 2]],
+  giftcardBalance: 79.82
+};
+
+
+checkInventory(order)
+    .then((resolvedValueArray) => {
+       return processPayment(resolvedValueArray);
+    })
+            .then((resolvedValueArray) => {
+               return shipOrder(resolvedValueArray);
+            })
+                    .then((successMessage) => {
+                        console.log(successMessage); 
+                    });
+
+
+const checkSunglasses = checkAvailability('sunglasses', 'Favorite Supply Co.');
+const checkPants = checkAvailability('pants', 'Favorite Supply Co.'); 
+const  checkBags = checkAvailability('bags', 'Favorite Supply Co.');
+
+Promise.all([checkSunglasses, checkPants, checkBags])
+  .then(onFulfill)
+  .catch(onReject);
+
+
+
+// (await, fetch, .then, .catch, .finally, etc.)
+
 
 
 // Spread Operator & Rest Operator (ES6) (...) (destructuring)

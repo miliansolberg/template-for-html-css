@@ -556,8 +556,49 @@ Promise.all([checkSunglasses, checkPants, checkBags])
 
 
 
-// (await, fetch, .then, .catch, .finally, etc.)
+// (await, async, .finally, fetch etc.)
+write an async function
 
+async function myDisplay() {
+  let myPromise = new Promise(function(myResolve, myReject) {
+    setTimeout(function() { myResolve
+      ("I love You !!"); }, 3000);
+  });
+
+  console.log(await myPromise);
+}
+
+function withConstructor(num){
+  return new Promise((resolve, reject) => {
+    if (num === 0){
+      resolve('zero');
+    } else {
+      resolve('not zero');
+    }
+  });
+}
+
+withConstructor(0)  // This returns a promise without async keyword
+  .then((resolveValue) => {
+  console.log(` withConstructor(0) returned a promise which resolved to: ${resolveValue}.`);
+});
+
+// Write your code below:
+async function withAsync(num) { // This returns a promise with async keyword
+  if (num === 0) {
+    return 'zero';
+} else {
+  return 'not zero';
+  }
+}
+
+async function announceDinner() {
+  // Write your code below:
+  let meal = await brainstormDinner();
+    console.log(`I'm going to make ${meal} for dinner.`);
+}
+
+announceDinner()
 
 
 // Spread Operator & Rest Operator (ES6) (...) (destructuring)

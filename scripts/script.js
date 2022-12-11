@@ -30,6 +30,8 @@ import reactDOM from "react-dom";
 import './styles/styles.scss'
 import functionExample from "./script.js";
 import {addTwo, checkConsistentOutput} from './script.js';
+import { object } from "webidl-conversions";
+import { example } from "yargs";
 
 
 const javascript = true;
@@ -599,6 +601,91 @@ async function announceDinner() {
 }
 
 announceDinner()
+
+
+
+async function usingTryCatch() { // complete asynchronous function with async await, try catch
+  try {
+    let resolveValue = await asyncFunction('thing that will fail');
+    let secondValue = await secondAsyncFunction(resolveValue);
+  } catch (err) {
+    // Catches any errors in the try block
+    console.log(err);
+  }
+ }
+  
+ usingTryCatch();
+
+ // API (Application Programming Interface)
+//  API requests are asynchronous requests that fetch data from an external source. We got Browser API's and 3rd party API's
+
+  fetch('https://api-to-call.com/endpoint').then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Request failed!');
+  }, networkError => {
+    console.log(networkError.message);
+  }).then(jsonResponse => {
+    return jsonResponse;
+  });
+
+
+// REST API (Representational State Transfer) 
+//  REST API's are a set of rules that developers follow when they create their API.
+//  REST API's are designed to make it easier for systems to communicate with each other. They are lightweight and fast.
+// restful api's are stateless, client-server, cacheable, layered system, code on demand (optional), uniform interface
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/data/:id', (req, res) => {
+  // retrieve data with id
+  const data = retrieveData(req.params.id)
+  if (data) {
+    res.json(data)
+  } else {
+    res.status(404).send('Data not found')
+  }
+})
+
+app.put('/data/:id', (req, res) => {
+  // update data with id
+  const data = req.body
+  if (updateData(req.params.id, data)) {
+    res.send('Data updated')
+  } else {
+    res.status(500).send('Error updating data')
+  }
+})
+
+app.listen(port, () => {
+  console.log(`API listening on port ${port}`)
+})
+
+// JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write.
+//  It is easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999.
+// JSON is a text format that is completely language independent but uses conventions that are
+//  familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others.
+//  These properties make JSON an ideal data-interchange language.
+
+const json = '{"result":true, "count":42}'; // JSON Parse example (turns JSON into a JS object)
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// expected output: 42
+
+
+const object1 = { // JSON Stringifty example (turns JS object into JSON)
+  a: 'somestring',
+  b: 42,
+  c: false
+};
+
+console.log(JSON.stringify(object1));
+// expected output: "{"a":"somestring","b":42,"c":false}"
+
 
 
 // Spread Operator & Rest Operator (ES6) (...) (destructuring)

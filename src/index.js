@@ -28,17 +28,17 @@
 import react from "react"; // modules are reusable pieces of code that can be exported from one program and imported for use in another program
 import reactDOM from "react-dom";
 import './styles/styles.scss'
-import functionExample from "./script.js";
-import {addTwo, checkConsistentOutput} from './script.js';
+import functionExample from "./index.js";
+import {addTwo, checkConsistentOutput} from './index.js';
 import { object } from "webidl-conversions";
 import { example } from "yargs";
 
 
 const javascript = true;
-const react = 12;
+const reactnumber = 12;
 const node = "cool";
 
-export { javascript, react, node, functionExample, addTwo, checkConsistentOutput, higherOrderFunc, anotherFunc };
+export { javascript, reactnumber, node, functionExample, addTwo, checkConsistentOutput, higherOrderFunc, anotherFunc };
 
 // CONDITIONALS
 // ternary operator
@@ -75,10 +75,10 @@ switch (node) {
 
 // FUNCTIONS
 
-const functionExample = (a, b) => {
+const functionExample1 = (a, b) => {
   return a * b;
 };
-console.log(functionExample(2, 3)); // 6
+console.log(functionExample1(2, 3)); // 6
 
 // ARRAYS - lists that store data
 const foods = ["apples", "oranges", "pears, 10, true"];
@@ -102,17 +102,17 @@ console.log(foods[1]);
 
 // callback functions
 
-const addTwo = (num) => {
+const addTwo1 = (num) => {
   return num + 2;
 };
 
-const checkConsistentOutput = (func, val) => {
+const checkConsistentOutput1 = (func, val) => {
   let checkA = val + 2;
   let checkB = func(val);
   return checkA === checkB ? func(val) : "inconsistent results";
 };
 
-console.log(checkConsistentOutput(addTwo, 10));
+console.log(checkConsistentOutput1(addTwo1, 10));
 
 // LOOPS
 
@@ -377,9 +377,9 @@ const lessThanTen = jumbledNums.findIndex((num) => {
 });
 
 // reduce()
-const numbers = [1, 2, 4, 10];
+const numberss = [1, 2, 4, 10];
  
-const summedNums = numbers.reduce((accumulator, currentValue) => {
+const summedNums = numberss.reduce((accumulator, currentValue) => {
   return accumulator + currentValue
 }, 100)  // <- Second argument for .reduce()
  
@@ -389,7 +389,7 @@ console.log(summedNums); // Output: 117
 // Regular expressions are patterns used to match character combinations in strings.
 
 // .test()
-const myString
+const myString = "Hello, World!";
 const myRegex = /Hello/;
 const result = myRegex.test(myString);
 
@@ -471,7 +471,7 @@ try {
 
 // throw error
 
-throw error ('user not found'); // Code will not run after throw error
+//throw error ('user not found'); // Code will not run after throw error
 
 
 // Javascript testing (Mocha, TDD, Manual testing, Automated testing, etc.)
@@ -479,7 +479,7 @@ throw error ('user not found'); // Code will not run after throw error
 // Manually testing (npm start, npm test, npm run build, etc.)
 
 
-describe and it blocks (Mocha)
+// describe and it blocks (Mocha)
 
 describe('My First Test', () => {
   it('Does not do much!', () => {

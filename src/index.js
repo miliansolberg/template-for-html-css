@@ -25,27 +25,28 @@
 // JS is a asynchronous language
 // JS is a event driven language
 
-import react from "react"; // modules are reusable pieces of code that can be exported from one program and imported for use in another program
-import reactDOM from "react-dom";
-import './styles/styles.scss'
-import functionExample from "./index.js";
-import {addTwo, checkConsistentOutput} from './index.js';
-import { object } from "webidl-conversions";
-import { example } from "yargs";
+// import react from "react"; // modules are reusable pieces of code that can be exported from one program and imported for use in another program
+// import reactDOM from "react-dom";
+// import './styles/styles.scss'
+// import functionExample from "./index.js";
+// import {addTwo, checkConsistentOutput} from './index.js';
+// import { object } from "webidl-conversions";
+// import { example } from "yargs";
+// require = require("esm")(module/*, options*/)
+// module.exports = require("./main.js")
 
 
 const javascript = true;
 const reactnumber = 12;
 const node = "cool";
 
-export { javascript, reactnumber, node, functionExample, addTwo, checkConsistentOutput, higherOrderFunc, anotherFunc };
 
 // CONDITIONALS
 // ternary operator
 
-javascript
-  ? console.log("I am a JavaScript developer")
-  : console.log("I am a Java developer");
+// javascript
+  // ? console.log("I am a JavaScript developer")
+  // : console.log("I am a Java developer");
 
 // if else / else if
 
@@ -686,6 +687,86 @@ const object1 = { // JSON Stringifty example (turns JS object into JSON)
 console.log(JSON.stringify(object1));
 // expected output: "{"a":"somestring","b":42,"c":false}"
 
+// JS Destructuring
+// Destructuring is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+
+let object = {
+  name: "Nishant",
+  age: 24, 
+  height: '20 meters',
+  weight: '70 KG'
+}
+
+let { name, salary, weight } = object;
+
+console.log(name)
+console.log(salary)
+console.log(weight)
 
 
-// Spread Operator & Rest Operator (ES6) (...) (destructuring)
+// How to Use Object Destructuring with Functions
+
+let object = {
+  name: "Nishant",
+  age: 24, 
+  salary: 300,
+  height: '20 meters',
+  weight: '70 KG'
+}
+
+function printData({name, age, salary, height, weight}){
+  console.log(name, age, salary, height, weight)
+}
+
+printData(object)
+
+// Spread Operator (ES6) (...) (destructuring)
+// the spread operator allows an iterable such as an
+//  array expression or string to be expanded in places
+//  where zero or more arguments (for function calls) or elements
+//  (for array literals) are expected, or an object expression to be expanded in places
+//  where zero or more key-value pairs (for object literals) are expected.
+
+let object1 = {
+  firstName: "Nishant",
+  age: 24, 
+  salary: 300,
+}
+
+let object2 = {
+  lastName: "Kumar",
+  height: '20 meters',
+  weight: '70 KG'
+}
+
+let object3 = {...object1, ...object2}
+console.log(object3);
+
+// Copy Arrays
+
+let array1 = [1, 2, 3, 4, 5]
+let array2 = [...array1]
+console.log(array2);
+
+// how to use spread operator with functions
+
+let array1 = [1, 2, 3, 4, 5]
+let array2 = [6, 7, 8, 9, 10]
+
+function addNumbers(a, b, c, d, e, f, g, h, i, j){
+  return a + b + c + d + e + f + g + h + i + j
+}
+
+console.log(addNumbers(...array1, ...array2))
+
+
+// Rest Operator (ES6) (...)
+
+function addNumbers(...args){
+  console.log(args)
+}
+
+addNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+// Learn and understand the concepts such as Hoisting, 
+// Event Bubbling, Scope, Prototype, Shadow DOM and strict.

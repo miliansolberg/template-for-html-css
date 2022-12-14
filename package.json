@@ -1,18 +1,25 @@
 {
-    "name": "my-package",
-    "version": "1.0.0",
-    "description": "My awesome npm package",
-    "author": "Jane Doe",
-    "license": "MIT",
-  
-  "dependencies": {
-    "lodash": "^4.17.21"
-  },
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "This is my own template that I follow for each of my projects. I use this template in my projects to optimize Web Page Speed, SEO and Lighthouse ranking in general.",
+  "main": "sw.js",
   "scripts": {
-    "build": "webpack"
-  }, 
-  "devDependencies": {
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miliansolberg/template-for-html-css.git"
+  },
+  "keywords": [
+    "boilerplate"
+  ],
+  "author": "milian solberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miliansolberg/template-for-html-css/issues"
+  },
+  "homepage": "https://github.com/miliansolberg/template-for-html-css#readme",
+  "dependencies": {
+    "esm": "^3.2.25"
   }
 }

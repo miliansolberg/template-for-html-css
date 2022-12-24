@@ -22,5 +22,8 @@ todo.md
 #node modules
 node_modules
 
+#api
+config.js
+
 # A .gitignore file prevents certain files from entering a remote repository.
 # This should include all forbidden files like .env and .pem, log files, and other sensitive files as they relate to your project.

@@ -770,3 +770,17 @@ addNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 // Learn and understand the concepts such as Hoisting, 
 // Event Bubbling, Scope, Prototype, Shadow DOM and strict.
+
+import { MY_API_KEY } from './config.js';
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+	}
+};
+
+fetch('https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));

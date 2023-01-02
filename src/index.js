@@ -560,8 +560,6 @@ Promise.all([checkSunglasses, checkPants, checkBags])
 
 
 // (await, async, .finally, fetch etc.)
-write an async function
-
 async function myDisplay() {
   let myPromise = new Promise(function(myResolve, myReject) {
     setTimeout(function() { myResolve

@@ -2,7 +2,7 @@
   "name": "boilerplate",
   "version": "1.0.0",
   "description": "This is my own template that I follow for each of my projects. I use this template in my projects to optimize Web Page Speed, SEO and Lighthouse ranking in general.",
-  "main": "sw.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,14 @@
   },
   "homepage": "https://github.com/miliansolberg/template-for-html-css#readme",
   "dependencies": {
-    "esm": "^3.2.25"
+    "axios": "^1.2.2",
+    "babel": "^6.23.0",
+    "esm": "^3.2.25",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "vite": "^4.0.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
   }
 }

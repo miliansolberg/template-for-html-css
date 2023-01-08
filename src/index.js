@@ -755,7 +755,7 @@ function addNumbers(a, b, c, d, e, f, g, h, i, j){
   return a + b + c + d + e + f + g + h + i + j
 }
 
-console.log(addNumbers(...array7, ...array8))
+console.log(addNumbers(...array1, ...array2))
 
 
 // Rest Operator (ES6) (...)

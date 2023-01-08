@@ -9,9 +9,11 @@ Additionally, I have all my commonly used tags and attributes in these files. Th
 2. Modern & Accessible Code
 3. Additional Files
 
-### Technologies used
+### Core Technologies used
 
 * HTML
 * CSS
 * JavaScript & JSON
 * Git
+* Vite
+* Pnpm

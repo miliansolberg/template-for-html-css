@@ -50,13 +50,13 @@ const node = "cool";
 
 // if else / else if
 
-if (react >= 12) {
-  console.log("I am a React developer");
-} else if (react < 12) {
-  console.log("I am a Vue developer");
-} else {
-  console.log("I am a SolidJS developer");
-}
+// if (react >= 12) {
+//   console.log("I am a React developer");
+// } else if (react < 12) {
+//   console.log("I am a Vue developer");
+// } else {
+//   console.log("I am a SolidJS developer");
+// }
 
 // switch
 
@@ -486,7 +486,7 @@ describe('My First Test', () => {
   it('Does not do much!', () => {
     expect(true).to.equal(true)
   })
-}
+});
 
 // Async
 // asynchronous programming is a programming paradigm that enables
@@ -704,7 +704,7 @@ console.log(weight)
 
 // How to Use Object Destructuring with Functions
 
-let object = {
+let object5 = {
   name: "Nishant",
   age: 24, 
   salary: 300,
@@ -716,7 +716,7 @@ function printData({name, age, salary, height, weight}){
   console.log(name, age, salary, height, weight)
 }
 
-printData(object)
+printData(object5)
 
 // Spread Operator (ES6) (...) (destructuring)
 // the spread operator allows an iterable such as an
@@ -725,37 +725,37 @@ printData(object)
 //  (for array literals) are expected, or an object expression to be expanded in places
 //  where zero or more key-value pairs (for object literals) are expected.
 
-let object1 = {
+let object6 = {
   firstName: "Nishant",
   age: 24, 
   salary: 300,
 }
 
-let object2 = {
+let object7 = {
   lastName: "Kumar",
   height: '20 meters',
   weight: '70 KG'
 }
 
-let object3 = {...object1, ...object2}
+let object8 = {...object1, ...object2}
 console.log(object3);
 
 // Copy Arrays
 
-let array1 = [1, 2, 3, 4, 5]
-let array2 = [...array1]
+let array5 = [1, 2, 3, 4, 5]
+let array6 = [...array1]
 console.log(array2);
 
 // how to use spread operator with functions
 
-let array1 = [1, 2, 3, 4, 5]
-let array2 = [6, 7, 8, 9, 10]
+let array7 = [1, 2, 3, 4, 5]
+let array8 = [6, 7, 8, 9, 10]
 
 function addNumbers(a, b, c, d, e, f, g, h, i, j){
   return a + b + c + d + e + f + g + h + i + j
 }
 
-console.log(addNumbers(...array1, ...array2))
+console.log(addNumbers(...array7, ...array8))
 
 
 // Rest Operator (ES6) (...)
@@ -769,7 +769,7 @@ addNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 // Learn and understand the concepts such as Hoisting, 
 // Event Bubbling, Scope, Prototype, Shadow DOM and strict.
 
-import { MY_API_KEY } from './config.js';
+// import { MY_API_KEY } from './config.js';
 
 const options = {
 	method: 'GET',

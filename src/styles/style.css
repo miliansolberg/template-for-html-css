@@ -1,3 +1,10 @@
+/* Follow BEM (The Block, Element, Modifier methodology)
+
+<div class="block block--mod">...</div>
+.block{}
+.block--mod {}
+*/
+
 :root {
   --blue: #2E294E;
   --lightblue: #345995;

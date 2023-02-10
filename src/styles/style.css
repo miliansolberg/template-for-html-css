@@ -1,9 +1,27 @@
 /* Follow BEM (The Block, Element, Modifier methodology)
 
-<div class="block block--mod">...</div>
-.block{}
-.block--mod {}
+<form class="form form--theme-xmas form--simple">
+  <input class="form__input" type="text" />
+  <input
+    class="form__submit form__submit--disabled"
+    type="submit" />
+</form>
+
+.form { }
+.form--theme-xmas { }
+.form--simple { }
+.form__input { }
+.form__submit { }
+.form__submit--disabled { }
+
+BEM with SCSS > BEM with CSS
+
 */
+
+
+/* 
+Grid for two-dimensional websites
+Flexbox for one-dimensional websites */
 
 :root {
   --blue: #2E294E;
@@ -28,6 +46,7 @@
 
 html {
   font-size: 16px;
+  scroll-behaviour: smooth;
 }
 
 body {
